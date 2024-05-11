@@ -1,0 +1,21 @@
+@SimpleBlog.AuthAPI_HostAddress = http://localhost:5013
+
+###
+POST {{SimpleBlog.AuthAPI_HostAddress}}/api/Auth/register
+Content-Type: application/json
+
+{
+  "email": "haroldovinente@gmail.com",
+  "password": "@Bola17",
+  "confirmPassword": "@Bola17"
+}
+
+
+###
+POST {{SimpleBlog.AuthAPI_HostAddress}}/api/Auth/login
+Content-Type: application/json
+
+{
+  "email": "haroldovinente@gmail.com",
+  "password": "@Bola17"
+}

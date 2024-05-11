@@ -1,0 +1,21 @@
+networks:
+  simpleblog_network:
+    driver: bridge
+
+services:
+  simpleblogdb:
+    image: postgres
+    container_name: simpleblogdb
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=simpleblogdb
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=@123#19
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - simpleblog_network
+
+volumes:
+  postgres_data:
